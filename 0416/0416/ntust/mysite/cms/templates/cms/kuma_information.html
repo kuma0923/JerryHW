@@ -1,0 +1,13 @@
+<h1>學生名單<h1>
+{% for s in students %}
+<table class="table">
+	<tr>
+		<p>姓名：{{ s.name }}</p>
+		<p>性別：{{ s.gender }}</p>
+		<p>科系：{{ s.department }}</p>
+		<p>地址：{{ s.address }}</p>
+		<p>自我介紹：</p>
+		<p>{{ s.about }}</p>
+	<tr>
+</table>
+{% endfor %}
