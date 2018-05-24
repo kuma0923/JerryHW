@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<style>
+button
+{
+	width: 80px;
+}
+</style>
+<html>
+<head>
+	<title>HW 0521</title>
+</head>
+<body>
+	<input type="number" id="x" value="0">
+	<input type="number" id="y" value="0">
+	<input type="text" id="z" disabled>
+	<br>
+	<button type="button" onClick="c()">C</button>
+	<button type="button" onClick="add()">+</button>
+	<button type="button" onClick="sub()">-</button>
+	<button type="button" onClick="mul()">*</button>
+	<button type="button" onClick="div()">/</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function c() {
+    let x = parseFloat($("input#x").val());
+	let y = parseFloat($("input#y").val());
+	$("input#x").val(0);
+	$("input#y").val(0);
+	$("input#z").val(0);
+}
+function add() {
+    let x = parseFloat($("input#x").val());
+	let y = parseFloat($("input#y").val());
+	$("input#z").val(x+y);
+}
+function sub() {
+    let x = parseFloat($("input#x").val());
+	let y = parseFloat($("input#y").val());
+	$("input#z").val(x-y);
+}
+function mul() {
+    let x = parseFloat($("input#x").val());
+	let y = parseFloat($("input#y").val());
+	$("input#z").val(x*y);
+}
+function div() {
+    let x = parseFloat($("input#x").val());
+	let y = parseFloat($("input#y").val());
+	$("input#z").val(x/y);
+}
+
+</script>
+
+</html>

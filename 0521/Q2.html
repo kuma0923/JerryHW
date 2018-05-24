@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<style>
+button
+{
+	width: 50px;
+}
+</style>
+<html>
+<head>
+	<title>HW 0521-2</title>
+</head>
+<body>
+	<input type="number" id="x">
+	<button type="button" onClick="c()">判斷</button>
+	<br>
+	<p id="demo">請輸入成績</p>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function c() {
+	let x = parseFloat($("input#x").val());
+    if (x>=0) {
+    	document.getElementById("demo").innerHTML = "及格";
+    }
+    else if(x>100||x<0){
+    	document.getElementById("demo").innerHTML = "請輸入1~100";
+    }
+    else{
+    	document.getElementById("demo").innerHTML = "不及格";
+    }
+}
+</script>
+
+</html>
